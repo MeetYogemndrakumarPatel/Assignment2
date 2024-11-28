@@ -1,0 +1,253 @@
+.A1 { 
+    max-width: 1400px;
+    margin: auto;
+    padding: 10px;
+    background-color: lightblue;
+    border: solid 2px black;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+header{
+    background: linear-gradient(to right, lightblue, blue);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+}
+footer {
+    background: linear-gradient(to right, blue, lightblue);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+header h1 {
+    margin: 10px;
+}
+
+nav {
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    border: solid 2px black;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: lightcoral;
+    border-radius: 5px;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    border-radius: 5px;
+    z-index: 999;
+    border: 2px solid #000;
+    width: 150px;
+}
+
+nav ul li:hover ul {
+    display: block; 
+}
+
+nav ul li ul li {
+    width: 150px;
+}
+
+nav ul li ul li a {
+    padding: 10px;
+    color: black;
+
+}
+
+
+.gallery-grid {
+    height: 1000px;
+    width: 1000px;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 3px; 
+    margin: -6px; 
+    padding: 8px; 
+    border: 2px solid black; 
+    background-color: lightblue; }
+
+
+.gallery-grid img {  
+    border-radius: 5px; 
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+
+.gallery-grid img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px black(0, 0, 0, 0.2); 
+}
+aside {
+    float: right;
+    border: solid 2px black;
+    color: black;
+    width: 250px;
+    margin: 10px;
+    background-image: url('../images/asside.jpg');
+    max-width: 300px;
+    min-height: 300px;
+    padding: 0px;
+   
+}
+
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    
+}
+
+aside ul li {
+    margin: 0.5em 0;
+    text-align: center;
+}
+
+aside ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form select, form button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: lightcoral;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+input[type="submit"] {
+    background-color: lightcoral; 
+    color: white;
+    font-size: 1rem; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+main {
+    padding: 1em;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 5px;
+}
+
+table th, table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: lightcoral;
+    color: white;
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: 18px; 
+    }
+
+    .header-container {
+        flex-direction: column; 
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    aside {
+        min-height: 200px;
+        background-image: url('../images/asside.jpg'); 
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 13px; 
+    }
+
+    .header-container img {
+        max-width: 70px; 
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    aside {
+        min-height: 150px;
+        background-image: url('../images/asside.jpg'); 
+    }
+
+    .gallery-grid img {
+        width: 100%; 
+        height: auto;
+    }
+    
+}
